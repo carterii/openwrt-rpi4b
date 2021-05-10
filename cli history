@@ -5,6 +5,9 @@ sudo apt install build-essential ccache ecj fastjar file g++ gawk gettext git ja
 git clone -b v21.02.0-rc1 https://github.com/openwrt/openwrt.git
 cd openwrt/
 
+# 使用基于官方版本.config计算的md5
+# 请手动覆盖两个文件 vermagic include/kernel-defaults.mk
+
 # 设置软件包源码库
 nano feeds.conf.default
 ./scripts/feeds update -a
