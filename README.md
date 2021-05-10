@@ -4,6 +4,7 @@ Debian10 ARM64 虚拟机环境下编译 OpenWrt树莓派4B固件 基于 [官方�
 
 - [x] luci-app-passwall (for ssr) from [xiaorouji](https://github.com/xiaorouji/openwrt-passwall)
 - [x] luci-app-ddnsto from [linkease](https://github.com/linkease/nas-packages)
+- [x] 默认开启 BBR 加速：kmod-tcp-bbr
 - [x] USB RNDIS 网卡支持：华为随身wifi USB直连上网
 - [x] 命令行挂载 samba：mount.cifs
 
