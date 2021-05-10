@@ -5,7 +5,7 @@ sudo apt install build-essential ccache ecj fastjar file g++ gawk gettext git ja
 git clone -b v21.02.0-rc1 https://github.com/openwrt/openwrt.git
 cd openwrt/
 
-# 使用基于官方版本.config
+# 使用官方版本 .config
 sudo apt install curl
 curl -L https://downloads.openwrt.org/releases/21.02.0-rc1/targets/bcm27xx/bcm2711/config.buildinfo -o .config
 
@@ -23,3 +23,6 @@ make download
 
 # 编译生成固件（耗时较长）
 make
+
+# 检查内核版本号与官方一致：77a9e737be756dd3a5fbcba692c4fb84
+find build_dir/ -name .vermagic -exec cat {} \;
