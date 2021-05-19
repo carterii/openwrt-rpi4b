@@ -16,6 +16,8 @@ nano feeds.conf.default
 
 # 修改配置文件 .config
 # luci-app-passwall 需额外开启 luci-compact 并取消 dnsmasq（与 dnsmasq-full 配置冲突）
+# CONFIG_GOLANG_EXTERNAL_BOOTSTRAP_ROOT /usr/bin/go
+sudo apt install golang-go
 make menuconfig
 
 # 下载编译工具链源码
