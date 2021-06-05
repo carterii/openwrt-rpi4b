@@ -2,12 +2,12 @@
 sudo apt install build-essential ccache ecj fastjar file g++ gawk gettext git java-propose-classpath libelf-dev libncurses5-dev libncursesw5-dev libssl-dev python python2.7-dev python3 unzip wget python3-distutils python3-setuptools rsync subversion swig time xsltproc zlib1g-dev
 
 # 拉取openwrt源码
-git clone -b v21.02.0-rc1 https://github.com/openwrt/openwrt.git
+git clone -b v21.02.0-rc2 https://github.com/openwrt/openwrt.git
 cd openwrt/
 
 # 使用官方版本 .config
 sudo apt install curl
-curl -L https://downloads.openwrt.org/releases/21.02.0-rc1/targets/bcm27xx/bcm2711/config.buildinfo -o .config
+curl -L https://downloads.openwrt.org/releases/21.02.0-rc2/targets/bcm27xx/bcm2711/config.buildinfo -o .config
 
 # 设置软件包源码库
 nano feeds.conf.default
@@ -15,7 +15,7 @@ nano feeds.conf.default
 ./scripts/feeds install -a
 
 # 修改配置文件 .config
-# luci-app-passwall 需额外开启 luci-compact 并取消 dnsmasq（与 dnsmasq-full 配置冲突）
+# luci-app-ddnsto 需额外开启 luci-compact, luci-app-passwall 需取消 dnsmasq（与 dnsmasq-full 配置冲突）
 # CONFIG_GOLANG_EXTERNAL_BOOTSTRAP_ROOT /usr/bin/go
 sudo apt install golang-go
 make menuconfig
