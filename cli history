@@ -12,6 +12,7 @@ curl -L https://downloads.openwrt.org/releases/21.02.0-rc2/targets/bcm27xx/bcm27
 # 设置软件包源码库
 nano feeds.conf.default
 ./scripts/feeds update -a
+# 移除异常包相关信息 xr_usb_serial_common ./feeds/packages.index ./feeds/packages.tmp/info/ ./feeds/packages/libs/
 ./scripts/feeds install -a
 
 # 修改配置文件 .config
